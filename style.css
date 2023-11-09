@@ -23,3 +23,15 @@ body{
     text-align: center;
     text-transform: uppercase;
 }
+.word-display {
+    display:flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.word-display .letter {
+    width: 28px;
+    border-bottom: 3px solid black;
+    margin-bottom: 40px;
+}
