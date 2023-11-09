@@ -44,3 +44,7 @@ const wordlist = [
     hint: "Movie series"
 },       
 ]
+
+export {
+    wordlist
+}
