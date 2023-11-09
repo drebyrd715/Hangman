@@ -2,16 +2,23 @@ import { wordlist } from "./wordlist.js";
 const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 
+let currentWord;
+
 const getRandomWord = () => {
     /// getting random word from wordlist //////
   const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
+  currentWord = word;
   console.log(word);
   document.querySelector(".hint-text b").innerText = hint;
   wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"><li>`).join("");
 };
 
 const startGame = (button, clickedLetter) => {
-    console.log(clickedLetter)
+    if(currentWord.includes(clickedLetter)) {
+        console.log(clickedLetter, " correct");
+    } else {
+        console.log(clickedLetter, "wrong letter");
+    }
 }
 
 ///// Making keyboard buttons also event listeners////////
