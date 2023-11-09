@@ -1,23 +1,23 @@
 const wordlist = [
 {
-    word: "",
-    hint: ""
+    word: "kayak",
+    hint: "something you do in the water for fun"
 },  
 {
-    word: "",
-    hint: ""
+    word: "oxygen",
+    hint: "what we need to survive"
 },    
 {
-    word: "",
-    hint: ""
+    word: "quad",
+    hint: "motorized vehicle"
 }, 
 {
-    word: "",
-    hint: ""
+    word: "Unzip",
+    hint: "how u take off something"
 },  
 {
-    word: "",
-    hint: ""
+    word: "zigzap",
+    hint: "lines in an unusual pattern"
 },  
 {
     word: "",
