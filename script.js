@@ -1,13 +1,13 @@
 import { wordlist } from "./wordlist.js";
+const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 
-let word;
-let hint;
-///// Get Random word///////
 const getRandomWord = () => {
     /// getting random word from wordlist //////
-  word = wordlist[Math.round(Math.random() * wordlist.length)];
-  hint = wordlist[Math.round(Math.random() * wordlist.length)];
+  const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
+  console.log(word)
+  document.querySelector(".hint-text b").innerText = hint;
+  wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"><li>`).join("");
 };
 
 ///// Making keyboard buttons for all letters////////
