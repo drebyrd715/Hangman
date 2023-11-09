@@ -82,7 +82,7 @@ margin: -40px 0 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: grey;
+    background: rgb(0,0,0,0.6);
 }
 .game-modal img{
    max-width: 130px;
@@ -100,4 +100,7 @@ border-radius: 20px;
 }
 .game-modal p {
     font-size: 1.5rem;
+}
+.game-modal p b{
+    font-size: 1.6rem;
 }
