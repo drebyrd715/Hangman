@@ -12,4 +12,14 @@ body{
     padding: 60px 40px;
     align-items: flex-end;
     border-radius: 30px;
+    gap: 50px;
+}
+.hangman-box img {
+    max-width: 270px;
+}
+.hangman-box h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
