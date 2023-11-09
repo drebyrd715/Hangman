@@ -1,8 +1,10 @@
 import { wordlist } from "./wordlist.js";
 const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
+const guessesText = document.querySelector(".guesses-text b");
 
-let currentWord;
+let currentWord, wronGuessCount = 0;
+const maxGuesses = 5;
 
 const getRandomWord = () => {
     /// getting random word from wordlist //////
@@ -14,11 +16,19 @@ const getRandomWord = () => {
 };
 
 const startGame = (button, clickedLetter) => {
+    /// does clicked letter exist on current word? //////
     if(currentWord.includes(clickedLetter)) {
-        console.log(clickedLetter, " correct");
-    } else {
-        console.log(clickedLetter, "wrong letter");
+        //// show the right letters on word display //////
+       [...currentWord].forEach((letter, index) => {
+        if (letter === clickedLetter) {
+            wordDisplay.querySelectorAll("li")[index].innerText = letter;
+            wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+        }
+    })
+} else {
+       wronGuessCount++;
     }
+    guessesText.innerText = `${wronGuessCount} / ${maxGuesses}`;
 }
 
 ///// Making keyboard buttons also event listeners////////

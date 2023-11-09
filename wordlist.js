@@ -20,7 +20,7 @@ const wordlist = [
     hint: "lines in an unusual pattern"
 },  
 {
-    word: "Lebron James",
+    word: "LebronJames",
     hint: "The Goat!!"
 },  
 {
