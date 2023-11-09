@@ -34,4 +34,12 @@ body{
     width: 28px;
     border-bottom: 3px solid black;
     margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+.word-display .letter.guessed {
+border-color: transparent;
+margin: -40px 0 35px;
 }
