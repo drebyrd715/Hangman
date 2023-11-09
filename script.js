@@ -31,7 +31,7 @@ const startGame = (button, clickedLetter) => {
     guessesText.innerText = `${wronGuessCount} / ${maxGuesses}`;
 }
 
-///// Making keyboard buttons also event listeners////////
+///// Making keyboard buttons also event listeners///////////
 for (let i = 97; i <= 122; i++) {
   const button = document.createElement("button");
   button.innerText = String.fromCharCode(i);
