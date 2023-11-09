@@ -73,3 +73,31 @@ margin: -40px 0 35px;
 .keyboard button:hover {
     background: gold;
 }
+.game-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+.game-modal img{
+   max-width: 130px;
+   margin-bottom: 20px;
+}
+.game-modal .content {
+background: white;
+max-width: 420px;
+width: 100%;
+padding: 30px;
+border-radius: 20px;
+}
+.game-modal h4 {
+    font-size: 1.5rem;
+}
+.game-modal p {
+    font-size: 1.5rem;
+}
