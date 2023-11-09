@@ -1,46 +1,46 @@
 const wordlist = [
 {
-    word: "kayak",
+    word: "Kayak",
     hint: "something you do in the water for fun"
 },  
 {
-    word: "oxygen",
+    word: "Oxygen",
     hint: "what we need to survive"
 },    
 {
-    word: "quad",
+    word: "Quad",
     hint: "motorized vehicle"
 }, 
 {
-    word: "Unzip",
+    word: "UnZip",
     hint: "how u take off something"
 },  
 {
-    word: "zigzap",
+    word: "ZigZag",
     hint: "lines in an unusual pattern"
 },  
 {
-    word: "",
-    hint: ""
+    word: "Lebron James",
+    hint: "The Goat!!"
 },  
 {
-    word: "",
-    hint: ""
+    word: "Birthday",
+    hint: "Everyone has it every year"
 },  
 {
-    word: "",
-    hint: ""
+    word: "Mouse",
+    hint: "annoying unwanted creature"
 },  
 {
-    word: "",
-    hint: ""
+    word: "Floyd",
+    hint: "Richest Athlete"
 },  
 {
-    word: "",
-    hint: ""
+    word: "AI",
+    hint: "Creation of humans"
 },  
 {
-    word: "",
-    hint: ""
+    word: "Twilight",
+    hint: "Movie series"
 },       
 ]
