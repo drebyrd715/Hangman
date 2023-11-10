@@ -20,7 +20,12 @@ const getRandomWord = () => {
 };
 
 const gameOver = (youWin) => {
+    // after game over, show image /////
     setTimeout(() => {
+        const modalText = youWon ? `You got the word:` : `The correct word was:`;
+        gameModal.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
+        gameModal.querySelector("h4").src = `${youWin ? `YouWin` : `Game Over`}`;
+        gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`
             gameModal.classList.add("show");
     }, 300);
 }

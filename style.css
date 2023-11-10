@@ -79,10 +79,14 @@ margin: -40px 0 35px;
     top: 0;
     width: 40%;
     height: 40%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background: rgb(0,0,0,0.6);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
 }
 .game-modal img{
    max-width: 130px;
@@ -117,4 +121,8 @@ border-radius: 20px;
     .hangman-box h1 {
         display: none;
     }
+}
+.game-modal .show {
+    opacity: 1;
+    pointer-events: auto;
 }
