@@ -4,12 +4,12 @@ const wordlist = [
     hint: "something you do in the water for fun"
 },  
 {
-    word: "Oxygen",
-    hint: "what we need to survive"
+    word: "Party",
+    hint: "a way of having fun"
 },    
 {
-    word: "Quad",
-    hint: "motorized vehicle"
+    word: "Rolls Royce",
+    hint: "High End Vehicle"
 }, 
 {
     word: "UnZip",
@@ -28,16 +28,16 @@ const wordlist = [
     hint: "Everyone has it every year"
 },  
 {
-    word: "Mouse",
-    hint: "annoying unwanted creature"
+    word: "Happy",
+    hint: "Joyful feeling"
 },  
 {
     word: "Floyd",
     hint: "Richest Athlete"
 },  
 {
-    word: "AI",
-    hint: "Creation of humans"
+    word: "Tarzan",
+    hint: "Kingof the jungle"
 },  
 {
     word: "Twilight",
