@@ -33,6 +33,7 @@ const startGame = (button, clickedLetter) => {
        wronGuessCount++;
        hangmanImage.src = `hangman/hangman-${wronGuessCount}.svg`;
     }
+    button.disable = true;
     guessesText.innerText = `${wronGuessCount} / ${maxGuesses}`;
 }
 

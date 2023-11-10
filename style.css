@@ -79,7 +79,7 @@ margin: -40px 0 35px;
     top: 0;
     width: 40%;
     height: 40%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background: rgb(0,0,0,0.6);
@@ -103,4 +103,18 @@ border-radius: 20px;
 }
 .game-modal p b{
     font-size: 1.6rem;
+}
+/* use media to make the window responsive */
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
 }
