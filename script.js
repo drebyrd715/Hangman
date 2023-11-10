@@ -5,7 +5,7 @@ const guessesText = document.querySelector(".guesses-text b");
 const hangmanImage = document.querySelector(".hangman-box img");
 
 
-let currentWord, wronGuessCount = 0;
+let currentWord, wrongGuessCount = 0;
 const maxGuesses = 5;
 
 const getRandomWord = () => {
@@ -30,11 +30,13 @@ const startGame = (button, clickedLetter) => {
     })
 } else {
     //// if clicked latter dont exist update wrongGuessCount and picture img /////
-       wronGuessCount++;
-       hangmanImage.src = `hangman/hangman-${wronGuessCount}.svg`;
+       wrongGuessCount++;
+       hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
     }
     button.disabled = true;
-    guessesText.innerText = `${wronGuessCount} / ${maxGuesses}`;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+
+    
 }
 
 ///// Making keyboard buttons also event listeners///////////
