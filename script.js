@@ -2,6 +2,8 @@ import { wordlist } from "./wordlist.js";
 const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 const guessesText = document.querySelector(".guesses-text b");
+const hangmanImage = document.querySelector(".hangman-box img");
+
 
 let currentWord, wronGuessCount = 0;
 const maxGuesses = 5;
@@ -12,6 +14,7 @@ const getRandomWord = () => {
   currentWord = word;
   console.log(word);
   document.querySelector(".hint-text b").innerText = hint;
+  /// creating li of word length and putting in word display /////
   wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"><li>`).join("");
 };
 
@@ -20,13 +23,15 @@ const startGame = (button, clickedLetter) => {
     if(currentWord.includes(clickedLetter)) {
         //// show the right letters on word display //////
        [...currentWord].forEach((letter, index) => {
-        if (letter === clickedLetter) {
+        if(letter === clickedLetter) {
             wordDisplay.querySelectorAll("li")[index].innerText = letter;
             wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
         }
     })
 } else {
+    //// if clicked latter dont exist update wrongGuessCount and picture img /////
        wronGuessCount++;
+       hangmanImage.src = `hangman/hangman-${wronGuessCount}.svg`;
     }
     guessesText.innerText = `${wronGuessCount} / ${maxGuesses}`;
 }
