@@ -5,7 +5,7 @@ body{
     min-height: 100vh;
     background-color: lightblue;
 }
-.container{
+.box{
     width: 850px;
     background-color: white;
     display: flex;
@@ -73,7 +73,7 @@ margin: -40px 0 35px;
 .keyboard button:hover {
     background: gold;
 }
-.game-modal {
+.fun-game {
     position: fixed;
     left: 0;
     top: 0;
@@ -83,34 +83,34 @@ margin: -40px 0 35px;
     justify-content: center;
     align-items: center;
     background: rgb(0,0,0,0.6);
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
     pointer-events: none;
     opacity: 0;
     z-index: 999;
 }
-.game-modal img{
+.fun-game img{
    max-width: 130px;
    margin-bottom: 20px;
 }
-.game-modal .content {
+.fun-game .content {
 background: white;
 max-width: 420px;
 width: 100%;
 padding: 30px;
 border-radius: 20px;
 }
-.game-modal h4 {
+.fun-game h4 {
     font-size: 1.5rem;
 }
-.game-modal p {
+.fun-game p {
     font-size: 1.5rem;
 }
-.game-modal p b{
+.fun-game p b{
     font-size: 1.6rem;
 }
 /* use media to make the window responsive */
 @media (max-width: 782px) {
-    .container {
+    .box {
         flex-direction: column;
         padding: 30px 15px;
         align-items: center;
@@ -122,7 +122,7 @@ border-radius: 20px;
         display: none;
     }
 }
-.game-modal .show {
+.fun-game .show {
     opacity: 1;
     pointer-events: auto;
 }

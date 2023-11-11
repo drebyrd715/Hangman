@@ -3,7 +3,7 @@ const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 const guessesText = document.querySelector(".guesses-text b");
 const hangmanImage = document.querySelector(".hangman-box img");
-const gameModal = document.querySelector(".game-modal");
+const funGame = document.querySelector(".fun-game");
 const restartGamebtn = document.querySelector(".play-again");
 
 let currentWord, correctLetters, wrongGuessCount;
@@ -17,7 +17,7 @@ const resetGame = () => {
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   keyboardDiv.querySelectorAll("button").forEach((btn) => (btn.disabled = false));
   wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"><li>`).join("");
-  gameModal.classList.remove("show");
+  funGame.classList.remove("show");
 };
 
 const getRandomWord = () => {
@@ -34,18 +34,17 @@ const getRandomWord = () => {
 const gameOver = (youWin) => {
 //   // after game over, show image /////
   setTimeout(() => {
-    const modalText = youWon ? `You got the word:` : `The correct word was:`;
-    gameModal.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
-    gameModal.querySelector("h4").src = `${youWin ? `YouWin` : `Game Over`}`;
-    gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
-    gameModal.classList.add("show");
-  }, 300);
+    const gameText = youWin ? `You got the word:` : `The correct word was:`;
+    funGame.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
+    funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
+    funGame.querySelector("p").innerHTML = `${gameText} <b>${currentWord}</b>`;
+    funGame.classList.add("show");
+  }, 200);
 };
 
 const startGame = (button, clickedLetter) => {
 //   /// does clicked letter exist on current word? //////
   if (currentWord.includes(clickedLetter)) {
-    console.log(clickedLetter, "exist");
 //     //// show the right letters on word display //////
     [...currentWord].forEach((letter, index) => {
       if (letter === clickedLetter) {
@@ -55,7 +54,6 @@ const startGame = (button, clickedLetter) => {
       }
     });
   } else {
-    console.log(clickedLetter, "not exist")
 //     //// if clicked latter dont exist update wrongGuessCount and picture img /////
     wrongGuessCount++;
     hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
