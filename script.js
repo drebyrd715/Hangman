@@ -1,5 +1,5 @@
 import { wordlist } from "./wordlist.js";
-// const wordDisplay = document.querySelector(".word-display");
+const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 // const guessesText = document.querySelector(".guesses-text b");
 // const hangmanImage = document.querySelector(".hangman-box img");
@@ -18,20 +18,18 @@ const keyboardDiv = document.querySelector(".keyboard");
 //   keyboardDiv
 //     .querySelectorAll("button")
 //     .forEach((btn) => (btn.disabled = false));
-//   wordDisplay.innerHTML = currentWord
-//     .split("")
-//     .map(() => `<li class="letter"><li>`)
-//     .join("");
+//   wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"><li>`).join("");
 //   gameModal.classList.remove("show");
 // };
 
 const getRandomWord = () => {
 //   /// getting random word from wordlist //////
   const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
-  console.log(word, hint);
+  console.log(word);
 //   currentWord = word;
 //   console.log(word);
-//   document.querySelector(".hint-text b").innerText = hint;
+  document.querySelector(".hint-text b").innerText = hint;
+  wordDisplay.innerHTML = word.split("").map(() =>`<li class="letter"></li>`).join("");
 //   resetGame();
 //   /// creating li of word length and putting in word display /////
 };
@@ -44,9 +42,7 @@ const getRandomWord = () => {
 //       youWin ? `victory` : `Lost`
 //     }.gif`;
 //     gameModal.querySelector("h4").src = `${youWin ? `YouWin` : `Game Over`}`;
-//     gameModal.querySelector(
-//       "p"
-//     ).innerHTML = `${modalText} <b>${currentWord}</b>`;
+//     gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
 //     gameModal.classList.add("show");
 //   }, 300);
 // };
