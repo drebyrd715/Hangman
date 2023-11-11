@@ -15,7 +15,7 @@ const resetGame = () => {
   wrongGuessCount = 0;
   hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-  keyboardDiv.querySelectorAll("button").forEach((btn) => (btn.disabled = false));
+  keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
   wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"><li>`).join("");
   funGame.classList.remove("show");
 };
