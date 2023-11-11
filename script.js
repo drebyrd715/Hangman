@@ -47,7 +47,8 @@ const getRandomWord = () => {
 //   }, 300);
 // };
 
-// const startGame = (button, clickedLetter) => {
+const startGame = (button, clickedLetter) => {
+    console.log(button, clickedLetter);
 //   /// does clicked letter exist on current word? //////
 //   if (currentWord.includes(clickedLetter)) {
 //     //// show the right letters on word display //////
@@ -69,16 +70,14 @@ const getRandomWord = () => {
 //   // gameOver function applies if a condition is met //////
 //   if (wrongGuessCount === maxGuesses) return gameOver(false);
 //   if (correctLetters.length === currentWord.length) return gameOver(true);
-// };
+};
 
 ///// Making keyboard buttons also event listeners///////////
 for (let i = 97; i <= 122; i++) {
   const button = document.createElement("button");
   button.innerText = String.fromCharCode(i);
   keyboardDiv.appendChild(button);
-//   button.addEventListener("click", (e) =>
-//     startGame(e.target, String.fromCharCode(i))
-//   );
+  button.addEventListener("click", (e) => startGame(e.target, String.fromCharCode(i)));
 }
 
 getRandomWord();
