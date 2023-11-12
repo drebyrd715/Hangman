@@ -4,20 +4,20 @@ const wordlist = [
     hint: "something you do in the water for fun"
 },  
 {
-    word: "Party",
-    hint: "a way of having fun"
+    word: "stamp",
+    hint: "travels the world but stays in the same place"
 },    
 {
-    word: "Rolls Royce",
-    hint: "High End Vehicle"
+    word: "Bottle",
+    hint: "has a neck but no head"
 }, 
 {
-    word: "UnZip",
-    hint: "how u take off something"
+    word: "YourWord",
+    hint: "you can keep it after you give it"
 },  
 {
-    word: "ZigZag",
-    hint: "lines in an unusual pattern"
+    word: "secret",
+    hint: "if you have me, you want to share me, if you share me, you havent kept me"
 },  
 {
     word: "LebronJames",
@@ -28,8 +28,8 @@ const wordlist = [
     hint: "Everyone has it every year"
 },  
 {
-    word: "Happy",
-    hint: "Joyful feeling"
+    word: "Darkness",
+    hint: "the more it is there, the less you see"
 },  
 {
     word: "Floyd",
@@ -40,9 +40,25 @@ const wordlist = [
     hint: "Kingof the jungle"
 },  
 {
-    word: "Twilight",
-    hint: "Movie series"
+    word: "clock",
+    hint: "it has hands but cant clap"
+},  
+{
+    word: "mufasa",
+    hint: "Lion King"
 },       
+{
+    word: "WillSmith",
+    hint: "aladdin genie"
+},       
+{
+    word: "jackblack",
+    hint: "gullivers travels"
+},       
+{
+    word: "icecream",
+    hint: "cold tasty treat"
+},            
 ]
 
 export {
