@@ -39,6 +39,8 @@ const gameOver = (youWin) => {
     funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
     funGame.querySelector("p").innerHTML = `${gameText} <b>${currentWord}</b>`;
     funGame.classList.add("show");
+    // reload game if i lose/////
+    location.reload()
   }, 200);
 };
 
