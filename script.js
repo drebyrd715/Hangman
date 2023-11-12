@@ -16,7 +16,8 @@ const resetGame = () => {
   hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
-  wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"><li>`).join("");
+  //   /// creating li of word length and putting in word display /////
+  wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
   funGame.classList.remove("show");
 };
 
@@ -24,11 +25,10 @@ const getRandomWord = () => {
 //   /// getting random word from wordlist //////
   const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
   console.log(word);
-  currentWord = word;
+  currentWord = word.toLowerCase()
 //   console.log(word);
   document.querySelector(".hint-text b").innerText = hint;
   resetGame();
-//   /// creating li of word length and putting in word display /////
 };
 
 const gameOver = (youWin) => {
@@ -64,6 +64,7 @@ const startGame = (button, clickedLetter) => {
   // gameOver function applies if a condition is met //////
   if (wrongGuessCount === maxGuesses) return gameOver(false);
   if (correctLetters.length === currentWord.length) return gameOver(true);
+  console.log(clickedLetter);
 };
 
 ///// Making keyboard buttons also event listeners///////////
