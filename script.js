@@ -67,10 +67,12 @@ const gameOver = (youWin) => {
         wrongGuessCount = 0;
         hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
         guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+        /// enable button clicks again to play next game ///////
         keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
         //   /// creating li of word length and putting in word display /////
         wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
         funGame.classList.remove("show");
+        /// 
       };
 
 //// 1. Making keyboard buttons dynamically also event listeners///////////
