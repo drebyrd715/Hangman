@@ -33,7 +33,6 @@ const getRandomWord = () => {
 
 const gameOver = (youWin) => {
 //   // after game over, show image /////
-  setTimeout(() => {
     const gameText = youWin ? `You got the word:` : `The correct word was:`;
     funGame.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
     funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
@@ -41,8 +40,7 @@ const gameOver = (youWin) => {
     funGame.classList.add("show");
     funGame.style.opacity = 100;
     // reload game if i lose/////
-  }, 2000);
-  const timeoutforreload = setTimeout(timeout, 4000)
+  const timeoutforreload = setTimeout(timeout, 3000)
 };
 const timeout =() => {
     location.reload()

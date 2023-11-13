@@ -86,7 +86,6 @@ margin: -40px 0 35px;
     transition: opacity 0.3s ease;
     pointer-events: none;
     opacity: 0;
-    z-index: 999;
 }
 .fun-game img{
    max-width: 130px;
