@@ -1,14 +1,23 @@
-I created a hangman game using HTML, Javascript, and CSS.
- The user has a random word selected from an array of words I created. The game begins once you select your first letter with your mouse. 
+markdown 
+# Hangman Game 
+This is a simple Hangman game implemented in JavaScript. The game randomly selects a word, and the player has to guess the letters in the word within a certain number of attempts.
 
-Each letter you choose counts as a guess. If the letter you selected is in the current word, it replaces an underscore with that letter and adds it into the correct guess array.
+ ## Installation 
+ 1. Clone the repository or download the source code. 
+ 2. Open the project folder in your preferred code editor. 
 
-If the letter you selected is wrong you lose one of your guess amounts and it is displayed in the incorrect guesses section. 
+ ## Usage 
+ 1. Open the `index.html` file in a web browser. 
+ 2. The game will start automatically. 
+ 3. Guess letters by clicking on the on-screen keyboard. 
+ 4. The game will provide feedback on your guesses and update the displayed word accordingly. 
+ 5. Keep guessing until you correctly guess the word or run out of attempts. 
 
-Each time you play there is a random word logged in the console.
+ ## Customization 
+ You can customize various aspects of the game by modifying the JavaScript code. - To add more words and hints, open the `wordlist.js` file and add words and hints to the `wordlist` array. - To adjust the number of attempts allowed, modify the `maxGuesses` variable in the `script.js` file. - To change the visual design, modify the CSS styles in the `styles.css` file. 
 
-With each guess amount you have left there is a new picture that will appear on the screen. 
+ ## Contributing 
+ Contributions are welcome! If you find any issues or have suggestions for improvements, please create a new issue or submit a pull request.
 
-Once you are all out of guesses an image will appear telling you the correct word. The same will happen if you win. 
-
-A few seconds after this the window will reload and you will be able to play again with a new random word. 
+  ## Resources
+  
