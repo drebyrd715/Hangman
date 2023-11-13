@@ -39,11 +39,14 @@ const gameOver = (youWin) => {
     funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
     funGame.querySelector("p").innerHTML = `${gameText} <b>${currentWord}</b>`;
     funGame.classList.add("show");
+    funGame.style.opacity = 100;
     // reload game if i lose/////
-    location.reload()
-  }, 200);
+  }, 2000);
+  const timeoutforreload = setTimeout(timeout, 4000)
 };
-
+const timeout =() => {
+    location.reload()
+}
 const startGame = (button, clickedLetter) => {
 //   /// does clicked letter exist on current word? //////
   if (currentWord.includes(clickedLetter)) {
