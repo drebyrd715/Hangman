@@ -20,6 +20,7 @@ This is a simple Hangman game implemented in JavaScript. The game randomly selec
  Contributions are welcome! If you find any issues or have suggestions for improvements, please create a new issue or submit a pull request.
 
   ## Resources
+  Dylan (PerScholas)
   Family Friend: Max
   W3 Schools
   Mozilla
