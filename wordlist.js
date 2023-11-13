@@ -70,7 +70,11 @@ const wordlist = [
 {
     word: "TheHulk",
     hint: "Strongest Avenger"
-},                      
+},  
+{
+    word: "BatMan",
+    hint: "Super Hero"
+},                                          
 ]
 
 export {
