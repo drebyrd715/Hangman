@@ -43,7 +43,7 @@ const startGame = (button, clickedLetter) => {
   // gameOver function applies if a condition is met //////
   if (wrongGuessCount === maxGuesses) return gameOver(false);
   if (correctLetters.length === currentWord.length) return gameOver(true);
-  console.log(clickedLetter);
+//   console.log(clickedLetter);
 };
 
 const gameOver = (youWin) => {
