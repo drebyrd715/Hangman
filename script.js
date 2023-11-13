@@ -14,8 +14,9 @@ const maxGuesses = 6;
 const getRandomWord = () => {
 //   /// getting random word from wordlist //////
   const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
+  /// .toLowerCase so the words chosen match the keyboard clicks ///
   currentWord = word.toLowerCase()
-//   console.log(word);
+//   showing hint on page /////
   document.querySelector(".hint-text b").innerText = hint;
   resetGame();
 };
@@ -32,7 +33,7 @@ const startGame = (button, clickedLetter) => {
       }
     });
   } else {
-//     //// if clicked latter dont exist update wrongGuessCount and picture img /////
+//     //// if clicked letter dont exist update wrongGuessCount and picture img /////
     wrongGuessCount++;
     hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
   }

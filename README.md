@@ -1,7 +1,7 @@
 I created a hangman game using HTML, Javascript, and CSS.
  The user has a random word selected from an array of words I created. The game begins once you select your first letter with your mouse. 
 
-Each letter you choose counts as a guess. If the letter you selected is in the cuurent word, it replaces an underscore with that letter and adds it into the correct guess array.
+Each letter you choose counts as a guess. If the letter you selected is in the current word, it replaces an underscore with that letter and adds it into the correct guess array.
 
 If the letter you selected is wrong you lose one of your guess amounts and it is displayed in the incorrect guesses section. 
 
