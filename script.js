@@ -1,4 +1,6 @@
 import { wordlist } from "./wordlist.js";
+
+///////// QUERIES /////////////////
 const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
 const guessesText = document.querySelector(".guesses-text b");
@@ -9,42 +11,15 @@ const restartGamebtn = document.querySelector(".play-again");
 let currentWord, correctLetters, wrongGuessCount;
 const maxGuesses = 6;
 
-const resetGame = () => {
-  /// reset all of game variables and UI elements
-  correctLetters = [];
-  wrongGuessCount = 0;
-  hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
-  guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-  keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
-  //   /// creating li of word length and putting in word display /////
-  wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
-  funGame.classList.remove("show");
-};
-
 const getRandomWord = () => {
 //   /// getting random word from wordlist //////
   const { word, hint } = wordlist[Math.round(Math.random() * wordlist.length)];
-  console.log(word);
   currentWord = word.toLowerCase()
 //   console.log(word);
   document.querySelector(".hint-text b").innerText = hint;
   resetGame();
 };
 
-const gameOver = (youWin) => {
-//   // after game over, show image /////
-    const gameText = youWin ? `You got the word:` : `The correct word was:`;
-    funGame.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
-    funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
-    funGame.querySelector("p").innerHTML = `${gameText} <b>${currentWord}</b>`;
-    funGame.classList.add("show");
-    funGame.style.opacity = 100;
-    // reload game if i lose/////
-  const timeoutforreload = setTimeout(timeout, 3000)
-};
-const timeout =() => {
-    location.reload()
-}
 const startGame = (button, clickedLetter) => {
 //   /// does clicked letter exist on current word? //////
   if (currentWord.includes(clickedLetter)) {
@@ -70,7 +45,35 @@ const startGame = (button, clickedLetter) => {
   console.log(clickedLetter);
 };
 
-///// Making keyboard buttons also event listeners///////////
+const gameOver = (youWin) => {
+    //   // after game over, show image /////
+        const gameText = youWin ? `You got the word:` : `The correct word was:`;
+        funGame.querySelector("img").src = `hangman/${youWin ? `victory` : `Lost`}.gif`;
+        funGame.querySelector("h4").innerText = `${youWin ? `YouWin` : `Game Over`}`;
+        funGame.querySelector("p").innerHTML = `${gameText} <b>${currentWord}</b>`;
+        funGame.classList.add("show");
+        funGame.style.opacity = 100;
+        // reload game if i lose/////
+      const timeoutforreload = setTimeout(timeout, 4000)
+    };
+    const timeout =() => {
+        location.reload()
+    };
+
+    const resetGame = () => {
+        /// reset all of game variables and UI elements
+        correctLetters = [];
+        wrongGuessCount = 0;
+        hangmanImage.src = `hangman/hangman-${wrongGuessCount}.svg`;
+        guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+        keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
+        //   /// creating li of word length and putting in word display /////
+        wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
+        funGame.classList.remove("show");
+      };
+
+//// 1. Making keyboard buttons dynamically also event listeners///////////
+/// generates all letters from A to Z ///
 for (let i = 97; i <= 122; i++) {
   const button = document.createElement("button");
   button.innerText = String.fromCharCode(i);
@@ -78,5 +81,6 @@ for (let i = 97; i <= 122; i++) {
   button.addEventListener("click", (e) => startGame(e.target, String.fromCharCode(i)));
 }
 
-getRandomWord();
 restartGamebtn.addEventListener("click", getRandomWord);
+getRandomWord();
+
