@@ -1,23 +1,23 @@
 const wordlist = [
 {
     word: "Kayak",
-    hint: "something you do in the water for fun"
+    hint: "Something you do in the water for fun"
 },  
 {
-    word: "stamp",
-    hint: "travels the world but stays in the same place"
+    word: "Stamp",
+    hint: "Travels the world but stays in the same place"
 },    
 {
     word: "Bottle",
-    hint: "has a neck but no head"
+    hint: "Has a neck but no Head"
 }, 
 {
-    word: "YourWord",
-    hint: "you can keep it after you give it"
+    word: "Steelers",
+    hint: "Greatest Football Franchise"
 },  
 {
-    word: "secret",
-    hint: "if you have me, you want to share me, if you share me, you havent kept me"
+    word: "Secret",
+    hint: "If you have me, you want to share me, If you share me, you havent kept me"
 },  
 {
     word: "LebronJames",
@@ -29,7 +29,7 @@ const wordlist = [
 },  
 {
     word: "Darkness",
-    hint: "the more it is there, the less you see"
+    hint: "The more it is there, The less you see"
 },  
 {
     word: "Floyd",
@@ -37,28 +37,40 @@ const wordlist = [
 },  
 {
     word: "Tarzan",
-    hint: "Kingof the jungle"
+    hint: "King of the Jungle"
 },  
 {
-    word: "clock",
-    hint: "it has hands but cant clap"
+    word: "Clock",
+    hint: "It has hands but can't clap"
 },  
 {
-    word: "mufasa",
+    word: "Mufasa",
     hint: "Lion King"
 },       
 {
     word: "WillSmith",
-    hint: "aladdin genie"
+    hint: "I am Legend"
 },       
 {
-    word: "jackblack",
-    hint: "gullivers travels"
+    word: "HarryPotter",
+    hint: "Parseltongue"
 },       
 {
-    word: "icecream",
-    hint: "cold tasty treat"
+    word: "PamelaVoorhees",
+    hint: "Friday the 13th"
+},  
+{
+    word: "TheRock",
+    hint: "The People's Eyebrow"
 },            
+{
+    word: "GTA",
+    hint: "Greatest Video Game Series Ever"
+},            
+{
+    word: "TheHulk",
+    hint: "Strongest Avenger"
+},                      
 ]
 
 export {
