@@ -1,0 +1,12 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "markdown \r # Hangman Game \r This is a simple Hangman game implemented in JavaScript. The game randomly selects a word, and the player has to guess the letters in the word within a certain number of attempts.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
